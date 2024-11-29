@@ -1,4 +1,4 @@
-// List of motivational quotes
+
 const quotes = [
     { text: "Success is not final, failure is not fatal: It is the courage to continue that counts.", author: "Winston Churchill" },
     { text: "The way to get started is to quit talking and begin doing.", author: "Walt Disney" },
@@ -22,20 +22,19 @@ const quotes = [
     { text: "Success usually comes to those who are too busy to be looking for it.", author: "Henry David Thoreau" }
 ];
 
-// Display random quote each time the page loads
+
 document.addEventListener("DOMContentLoaded", () => {
     const quoteText = document.getElementById("quote-text");
     const quoteAuthor = document.getElementById("quote-author");
 
-    // Get a random quote from the list
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     
-    // Update the DOM with the quote
+   
     quoteText.textContent = `"${randomQuote.text}"`;
     quoteAuthor.textContent = `- ${randomQuote.author}`;
 });
 
-// Goal Planner Logic
+
 const goalForm = document.querySelector("form");
 const goals = [];
 const goalListContainer = document.createElement("div");
@@ -53,14 +52,14 @@ goalForm.addEventListener("submit", (event) => {
         return;
     }
 
-    // Add goal to the array and display
+   
     goals.push({ text, date, time });
     updateGoalList();
     goalForm.reset();
 });
 
 function updateGoalList() {
-    goalListContainer.innerHTML = ""; // Clear previous content
+    goalListContainer.innerHTML = ""; 
 
     if (goals.length === 0) {
         goalListContainer.innerHTML = "<p>No goals yet. Start adding your goals!</p>";
@@ -68,7 +67,7 @@ function updateGoalList() {
     }
 
     goals.forEach((goal, index) => {
-        // Create a card for each goal
+        
         const goalCard = document.createElement("div");
         goalCard.classList.add("goal-card");
 
@@ -86,18 +85,18 @@ function updateGoalList() {
         goalListContainer.appendChild(goalCard);
     });
 
-    // Add delete functionality
+   
     document.querySelectorAll(".delete-btn").forEach((btn) => {
         btn.addEventListener("click", (e) => {
             const goalIndex = e.target.dataset.index;
-            goals.splice(goalIndex, 1); // Remove goal from array
-            updateGoalList(); // Refresh display
+            goals.splice(goalIndex, 1); 
+            updateGoalList(); 
         });
     });
 }
 
 
-// Pomodoro Timer Logic
+
 let timerInterval;
 let timeLeft = 1500;
 
