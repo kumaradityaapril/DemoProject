@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e0f7fa;  /* Light sky blue background */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+    color: #333;
+}
+
+header {
+    background-color: #0097a7;  /* Sky blue for header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    font-weight: 600;
+}
+
+header img {
+    vertical-align: middle;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+/* Styling for Daily Quote */
+#daily-quote {
+    text-align: center;
+    font-style: italic;
+    color: #006064; /* Matches theme color */
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#daily-quote cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #00838f;
+}
+
+.sheet {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 20px 0;
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.sheet h2, .sheet h3 {
+    color: #006064;  /* Darker shade of sky blue */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.sheet img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"], input[type="date"], input[type="time"] {
+    border: 1px solid #0097a7;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background-color: #f1f8f9;
+}
+
+button {
+    background-color: #00838f;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    width: 180px;
+}
+
+button:hover {
+    background-color: #006064; /* Darker shade on hover */
+}
+
+footer {
+    background-color: #0097a7;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .sheet {
+        width: 100%;
+        max-width: 500px;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .sheet h2 {
+        font-size: 24px;
+    }
+
+    .sheet img {
+        height: auto;
+    }
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/zig-zag.png');
+    opacity: 0.1;
+    z-index: -1;
+    animation: moveBackground 20s infinite linear;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 500px 500px;
+    }
+}
+
+/* Pomodoro Timer Styling */
+.pomodoro {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+}
+
+#pomodoro-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#time-display {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #00838f; /* Blue for timer */
+}
+
+button {
+    background-color: #00838f;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #006064;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#goal-list {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.goal-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.goal-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.goal-details {
+    font-size: 14px;
+    color: #333;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+.goal-card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
