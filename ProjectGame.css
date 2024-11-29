@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #e0f7fa;  /* Light sky blue background */
+    background-color: #e0f7fa;  
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    background-color: #0097a7;  /* Sky blue for header */
+    background-color: #0097a7;  
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -43,11 +43,11 @@ main {
     padding-bottom: 20px;
 }
 
-/* Styling for Daily Quote */
+
 #daily-quote {
     text-align: center;
     font-style: italic;
-    color: #006064; /* Matches theme color */
+    color: #006064;
     margin-top: 20px;
     font-size: 18px;
 }
@@ -62,14 +62,14 @@ main {
 .sheet {
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
     margin: 20px 0;
     padding: 20px;
     animation: fadeIn 1s ease-out;
 }
 
 .sheet h2, .sheet h3 {
-    color: #006064;  /* Darker shade of sky blue */
+    color: #006064;  
     margin-bottom: 20px;
     font-weight: 600;
 }
@@ -108,7 +108,7 @@ button {
 }
 
 button:hover {
-    background-color: #006064; /* Darker shade on hover */
+    background-color: #006064; 
 }
 
 footer {
@@ -192,7 +192,7 @@ body::before {
     }
 }
 
-/* Pomodoro Timer Styling */
+
 .pomodoro {
     background-color: #ffffff;
     border-radius: 12px;
@@ -212,7 +212,7 @@ body::before {
     font-size: 60px;
     font-weight: bold;
     margin-bottom: 25px;
-    color: #00838f; /* Blue for timer */
+    color: #00838f; 
 }
 
 button {
