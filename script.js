@@ -105,7 +105,7 @@ const startBtn = document.getElementById("start-btn");
 const resetBtn = document.getElementById("reset-btn");
 
 function startPomodoro() {
-    if (timerInterval) return; // Don't start a new timer if one is already running
+    if (timerInterval) return; 
 
     timerInterval = setInterval(() => {
         timeLeft--;
